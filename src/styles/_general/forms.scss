@@ -1,0 +1,35 @@
+.form {
+  .titleinput {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  .inputtext {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 5px 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .buttom {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    color: #666;
+    text-align: center;
+    padding: 10px 0px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  & .-submit {
+    margin-top: 15px;
+  }
+
+  & .-clear {
+    margin-top: 10px;
+  }
+}

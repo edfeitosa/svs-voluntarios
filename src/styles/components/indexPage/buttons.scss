@@ -1,0 +1,38 @@
+@mixin buttonConfig {
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    min-height: 70px;
+    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.1);
+    cursor: pointer;
+}
+
+@mixin iconConfig {
+    position: relative;
+    width: 48px;
+    left: 50%;
+    margin: 0px 0px 0px -24px;
+}
+
+.button-left {
+    float: left;
+    @include buttonConfig;
+
+    .icon {
+        @include iconConfig;
+    }
+}
+
+.button-right {
+    float: right;
+    @include buttonConfig;
+
+    .icon {
+        @include iconConfig;
+    }
+}

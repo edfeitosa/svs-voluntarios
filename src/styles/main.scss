@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700');
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: #666;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #000;
+}
+
+a, a:hover, a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+    
+}
+
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+    
+}
+
+@media only screen and (max-width: 480px) {
+
+}
