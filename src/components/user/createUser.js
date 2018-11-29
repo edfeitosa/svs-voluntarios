@@ -16,6 +16,7 @@ class CreateUser extends React.Component {
             name: '',
             email: '',
             cel: '',
+            disabledButtom: true,
             showModal: false,
             data: {}
         }
@@ -28,9 +29,40 @@ class CreateUser extends React.Component {
         central: ['1', 'CENTRAL DE VOLUNTÁRIOS']
     }
 
-    handleName = event => this.setState({ name: event.target.value });
-    handleEmail = event => this.setState({ email: event.target.value });
-    handleCel = event => this.setState({ cel: event.target.value });
+    disabledButtom = () => {
+        if (
+            this.state.name !== '' &&
+            this.state.email !== '' &&
+            this.state.cel !== ''
+        ) {
+            this.setState({ disabledButtom: false });
+        } else {
+            this.setState({ disabledButtom: true });
+        }
+    }
+
+    classButtom = () => {
+        if (this.state.disabledButtom) {
+            return 'buttom -submit -disabled';
+        } else {
+            return 'buttom -submit';
+        }
+    }
+
+    handleName = event => {
+        this.setState({ name: event.target.value });
+        this.disabledButtom();
+    }
+
+    handleEmail = event => {
+        this.setState({ email: event.target.value });
+        this.disabledButtom();
+    }
+
+    handleCel = event => {
+        this.setState({ cel: event.target.value });
+        this.disabledButtom();
+    }
 
     clearState = () => {
         this.setState({
@@ -74,7 +106,7 @@ class CreateUser extends React.Component {
     render() {
 
         const {
-            cel, showModal, type, data
+            cel, showModal, type, data, disabledButtom
         } = this.state;
 
         const { level } = this.props;
@@ -121,15 +153,16 @@ class CreateUser extends React.Component {
                         className="inputtext"
                         name="cel"
                         placeholder="(31) 99999-9999"
-                        value={ cel }
+                        value={cel}
                         onKeyUp={this.handleCel}
                     />
                 </label>
                 <input
                     type="submit"
-                    className="buttom -submit"
+                    className={this.classButtom()}
                     name="save"
                     value="SALVAR"
+                    disabled={disabledButtom}
                     onClick={this.onSubmit}
                 />
                 <input

@@ -32,4 +32,9 @@
   & .-clear {
     margin-top: 10px;
   }
+
+  & .-disabled {
+    color: #999;
+    background-color: #f1f1f1;
+  }
 }
