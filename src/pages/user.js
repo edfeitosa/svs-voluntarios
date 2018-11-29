@@ -7,17 +7,9 @@ import SearchUser from '../components/user/searchUser';
 
 class User extends React.Component {
 
-    state = {
-        parsed: ''
-    }
-
-    componentDidMount() {
-        this.setState({ parsed: queryString.parse(window.location.search) })
-    }
-
     render() {
 
-        const { parsed } = this.state;
+        const parsed = queryString.parse(window.location.search);
 
         return (
             <div>
