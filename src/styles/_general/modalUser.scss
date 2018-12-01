@@ -1,0 +1,95 @@
+@mixin buttonConfigModalUser {
+  width: 35%;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 8px 10px 10px 10px;
+  font-weight: 700;
+  font-size: 9px;
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 45px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.1);
+  cursor: pointer;
+}
+
+@mixin iconConfigModalUser {
+  position: relative;
+  width: 36px;
+  left: 50%;
+  margin: 0px 0px 0px -18px;
+}
+
+.bg-modal {
+  .modal-user {
+    position: relative;
+    width: 180px;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0px auto;
+    top: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+
+    > .header {
+      margin: -20px 0px 10px -20px;
+      padding: 10px 20px 5px 20px;
+      width: 180px;
+      text-align: center;
+
+      &.-information, &.-question {
+        background-color: rgb(142, 210, 255);
+      }
+    }
+
+    > .title-user {
+      font-size: 12px;
+      font-weight: 400;
+      margin: 60px 0px 15px 0px;
+      text-align: center;
+    }
+    
+    .button-left-modal-user {
+      float: left;
+      @include buttonConfigModalUser;
+  
+      .icon-modal-user {
+          @include iconConfigModalUser;
+
+          > img {
+            width: 100%;
+          }
+      }
+    }
+    
+    .button-right-modal-user {
+      float: right;
+      @include buttonConfigModalUser;
+  
+      .icon-modal-user {
+          @include iconConfigModalUser;
+
+          > img {
+            width: 100%;
+          }
+      }
+    }
+
+    > .buttom {
+      width: 82%;
+      border-radius: 5px;
+      background-color: #e4e4e4;
+      color: #666;
+      text-align: center;
+      padding: 10px 0px;
+      border: none;
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}

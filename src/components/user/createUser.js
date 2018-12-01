@@ -117,6 +117,7 @@ class CreateUser extends React.Component {
                 {
                     showModal &&
                     <Modal
+                        showModal={showModal}
                         type={type}
                         data={data}
                         alterModalState={this.showModal}
