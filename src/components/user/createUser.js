@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import MaskedInput from 'react-text-mask'
 
 import usersClient from '../../client/usersClient';
-import Modal from '../../components/_general/modal';
-import { FooterCreateUser } from '../_layout/footer';
+import Modal from '../_general/modal';
+import { FooterCreateUser } from '../_general/footer';
 
 import '../../styles/_general/forms.scss';
 
@@ -123,7 +123,7 @@ class CreateUser extends React.Component {
                     />
                 }
 
-                <h2>{this.userLevels[level][1]}</h2>
+                <h3>{this.userLevels[level][1]}</h3>
                 <label>
                     <div className="titleinput">Nome</div>
                     <input

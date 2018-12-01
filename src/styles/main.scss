@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900');
 
 * {
   padding: 0px;
@@ -11,17 +11,21 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  color: #666;
+  color: #666 !important;
 }
 
 .container {
   padding: 20px;
 }
 
+.padding-content {
+  padding: 65px 0px 90px 0px;
+}
+
 h1, h2, h3, h4 {
-  color: #000;
+  color: #333;
 }
 
 a, a:hover, a:visited {

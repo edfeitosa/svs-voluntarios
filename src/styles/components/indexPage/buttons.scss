@@ -4,35 +4,59 @@
     border-radius: 3px;
     padding: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 10px;
     text-align: center;
     margin-bottom: 15px;
-    min-height: 70px;
+    min-height: 65px;
+    text-transform: uppercase;
     box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.1);
     cursor: pointer;
 }
 
-@mixin iconConfig {
-    position: relative;
-    width: 48px;
-    left: 50%;
-    margin: 0px 0px 0px -24px;
+@mixin text {
+    text-align: center;
+    color: #999;
 }
 
-.button-left {
-    float: left;
-    @include buttonConfig;
-
-    .icon {
-        @include iconConfig;
-    }
+.title {
+    @include text;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.button-right {
-    float: right;
-    @include buttonConfig;
+.sub-title {
+    @include text;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
 
-    .icon {
-        @include iconConfig;
+.content-buttom {
+    margin-top: 165px;
+
+    @mixin iconConfig {
+        position: relative;
+        width: 48px;
+        left: 50%;
+        margin: 0px 0px 0px -24px;
     }
+    
+    .button-left {
+        float: left;
+        @include buttonConfig;
+    
+        .icon {
+            @include iconConfig;
+        }
+    }
+    
+    .button-right {
+        float: right;
+        @include buttonConfig;
+    
+        .icon {
+            @include iconConfig;
+        }
+    }
+
 }

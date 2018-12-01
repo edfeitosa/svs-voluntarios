@@ -3,7 +3,7 @@ import React from 'react';
 import voluntariosSmall from '../../images/system/voluntarios-small.png';
 import savassi from '../../images/system/savassi.png';
 
-import '../../styles/_layout/header.scss';
+import '../../styles/_general/header.scss';
 
 const Header = () => {
   return (

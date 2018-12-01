@@ -1,6 +1,10 @@
 .header {
-  background-color: #e4e4e4;
+  background-color: #e6e6e6;
+  /*background-image: linear-gradient(#ccc, #e6e6e6);*/
   padding-bottom: 9px;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
 
   .iconcentral {
     position: absolute;

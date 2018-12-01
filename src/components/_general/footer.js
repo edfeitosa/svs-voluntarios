@@ -6,7 +6,7 @@ import search from '../../images/icons/search.png';
 import newUser from '../../images/icons/new-user.png';
 import home from '../../images/icons/home.png';
 
-import '../../styles/_layout/footer.scss';
+import '../../styles/_general/footer.scss';
 
 export const FooterCreateUser = () => {
   return (

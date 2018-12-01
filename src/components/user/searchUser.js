@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { FooterSearchUser } from '../_layout/footer';
+import { FooterSearchUser } from '../_general/footer';
 
 class SearchUser extends React.Component {
 
     render() {
 
         return (
-            <div>
+            <div className="padding-content">
                 search.js
                 <FooterSearchUser />
             </div>

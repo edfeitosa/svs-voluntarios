@@ -12,7 +12,7 @@ class User extends React.Component {
         const parsed = queryString.parse(window.location.search);
 
         return (
-            <div>
+            <div className="padding-content">
                 {parsed.page === 'createuser' && <CreateUser level={parsed.level} />}
                 {parsed.page === 'addlistuser' && <AddListUser />}
                 {parsed.page === 'searchuser' && <SearchUser />}
