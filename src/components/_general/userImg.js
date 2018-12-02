@@ -1,6 +1,6 @@
 import React from 'react';
 
-import imgUser from '../../images/system/voluntarios-large.png';
+import imgUser from '../../images/system/user.png';
 import '../../styles/_general/userImg.scss';
 
 const UserImg = () => {

@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 import search from '../../images/icons/search.png';
 import addUser from '../../images/icons/new-user.png';
-import addList from '../../images/icons/add-user-group.png';
 import exit from '../../images/icons/exit.png';
+import church from '../../images/icons/church.png';
+import departaments from '../../images/icons/departaments.png';
 
 import ModalUser from './../../components/_general/modalUser';
 
@@ -18,24 +19,30 @@ class Buttons extends React.Component {
 
     buttons = [
         {
-            title: 'Adicionar lista',
-            img: addList,
+            title: 'Cadastrar igreja',
+            img: church,
             titleLink: '',
-            link: '/user?page=addlistuser'
+            link: '/church?page=addchurch'
         },
         {
-            title: 'Buscar',
+            title: 'Cadastrar departamentos',
+            img: departaments,
+            titleLink: '',
+            link: '/departaments?page=adddepartaments'
+        },
+        {
+            title: 'Buscar informações',
             img: search,
             link: '/user?page=searchuser'
         },
         {
-            title: 'Cadastrar',
+            title: 'Cadastrar usuário',
             img: addUser,
             titleLink: '',
             link: ''
         },
         {
-            title: 'Sair',
+            title: 'Sair do sistema',
             img: exit,
             titleLink: '',
             link: '/'
@@ -74,7 +81,7 @@ class Buttons extends React.Component {
                     this.buttons.map((item, i) =>
                         <div key={i}>
                             {
-                                item.title === "Cadastrar" &&
+                                item.title === "Cadastrar usuário" &&
                                 <div className={this.classDiv(i)} onClick={this.showModal}>
                                     <div className="icon">
                                         <img src={item.img} alt={item.title} title={item.title} />
@@ -83,7 +90,7 @@ class Buttons extends React.Component {
                                 </div>
                             }
                             {
-                                item.title !== "Cadastrar" &&
+                                item.title !== "Cadastrar usuário" &&
                                 <NavLink to={item.link} className={this.classDiv(i)}>
                                     <div className="icon">
                                         <img src={item.img} alt={item.title} title={item.title} />

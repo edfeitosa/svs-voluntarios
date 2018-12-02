@@ -59,7 +59,7 @@ const ModalUser = ({
           <img src={question} alt="question" />
         </div>
         <div className="title-user">
-          Cadastrar em que grupo?
+          Cadastrar em qual grupo?
         </div>
         {
           buttons.map((item, i) =>

@@ -1,9 +1,8 @@
 .header {
   background-color: #e6e6e6;
-  /*background-image: linear-gradient(#ccc, #e6e6e6);*/
   padding-bottom: 9px;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   width: 100%;
 
   .iconcentral {

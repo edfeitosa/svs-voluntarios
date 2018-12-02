@@ -1,7 +1,5 @@
 .bg-img {
-  background-image: url('./../../images/system/topo-svs.png');
-  background-size: 101%;
-  background-repeat: no-repeat;
+  background-color: #eee;
   z-index: 90;
   position: absolute;
   width: 100%;
@@ -18,7 +16,7 @@
     margin: 0px auto;
     border-radius: 100px;
     overflow: hidden;
-    top: 45px;
+    top: 53px;
     border: 8px solid #fff;
 
     img {
