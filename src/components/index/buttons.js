@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import search from '../../images/icons/search.png';
 import addUser from '../../images/icons/new-user.png';
-import exit from '../../images/icons/exit.png';
+import plaining from '../../images/icons/plaining.png';
+import training from '../../images/icons/training.png';
 import church from '../../images/icons/church.png';
 import departaments from '../../images/icons/departaments.png';
 
@@ -19,21 +20,21 @@ class Buttons extends React.Component {
 
     buttons = [
         {
+            title: 'Buscar informações',
+            img: search,
+            link: '/user?page=searchuser'
+        },
+        {
             title: 'Cadastrar igreja',
             img: church,
             titleLink: '',
-            link: '/church?page=addchurch'
+            link: '/'
         },
         {
             title: 'Cadastrar departamentos',
             img: departaments,
             titleLink: '',
-            link: '/departaments?page=adddepartaments'
-        },
-        {
-            title: 'Buscar informações',
-            img: search,
-            link: '/user?page=searchuser'
+            link: '/'
         },
         {
             title: 'Cadastrar usuário',
@@ -42,8 +43,14 @@ class Buttons extends React.Component {
             link: ''
         },
         {
-            title: 'Sair do sistema',
-            img: exit,
+            title: 'Calendário',
+            img: plaining,
+            titleLink: '',
+            link: '/'
+        },
+        {
+            title: 'Treinamentos',
+            img: training,
             titleLink: '',
             link: '/'
         }
