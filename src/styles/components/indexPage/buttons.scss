@@ -1,62 +1,52 @@
-@mixin buttonConfig {
-    width: 40%;
-    border: 1px solid #eee;
-    border-radius: 3px;
-    padding: 10px;
-    font-weight: 700;
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 15px;
-    min-height: 80px;
-    text-transform: uppercase;
-    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.1);
-    cursor: pointer;
-}
-
-@mixin text {
+.sub-title {
     text-align: center;
     color: #999;
-}
-
-.title {
-    @include text;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.sub-title {
-    @include text;
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .content-buttom {
-    margin: 165px 0px 40px 0px;
-
-    @mixin iconConfig {
+    margin: 213px 0px 30px 0px;
+    
+    .buttom {
         position: relative;
-        width: 48px;
-        left: 50%;
-        margin: 0px 0px 0px -24px;
-    }
-    
-    .button-left {
-        float: left;
-        @include buttonConfig;
-    
-        .icon {
-            @include iconConfig;
-        }
-    }
-    
-    .button-right {
-        float: right;
-        @include buttonConfig;
-    
-        .icon {
-            @include iconConfig;
-        }
-    }
+        background-color: #eee;
+        border-radius: 3px;
+        padding: 10px 0px 0px 0px;
+        margin-bottom: 15px;
+        max-height: 35px;
+        overflow: hidden;
+        cursor: pointer;
 
+        .title-buttom {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 10px;
+            padding-top: 6px;
+
+            >.arrow {
+                float: right;
+                padding-right: 10px;
+            }
+        }
+
+        .description-buttom {
+            font-weight: 200;
+            font-size: 10px;
+        }
+    
+        .icon-buttom {
+            float: left;
+            width: 24px;
+            left: 50%;
+            margin: -10px 10px 0px 0px;
+            background-color: #d6d6d6;
+            padding: 10px;
+
+            > img {
+                width: 100%;
+            }
+        }
+    }
 }

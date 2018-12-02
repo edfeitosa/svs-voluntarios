@@ -2,11 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import search from '../../images/icons/search.png';
-import addUser from '../../images/icons/new-user.png';
+import user from '../../images/icons/user.png';
 import plaining from '../../images/icons/plaining.png';
 import training from '../../images/icons/training.png';
 import church from '../../images/icons/church.png';
+import gc from '../../images/icons/user-group.png';
 import departaments from '../../images/icons/departaments.png';
+import edit from '../../images/icons/edit.png';
+import reports from '../../images/icons/reports.png';
+import exit from '../../images/icons/exit.png';
 
 import ModalUser from './../../components/_general/modalUser';
 
@@ -25,43 +29,51 @@ class Buttons extends React.Component {
             link: '/user?page=searchuser'
         },
         {
-            title: 'Cadastrar igreja',
-            img: church,
-            titleLink: '',
-            link: '/'
-        },
-        {
-            title: 'Cadastrar departamentos',
+            title: 'Departamentos',
             img: departaments,
-            titleLink: '',
             link: '/'
         },
         {
-            title: 'Cadastrar usuário',
-            img: addUser,
-            titleLink: '',
-            link: ''
+            title: 'Editar meus dados',
+            img: edit,
+            link: '/'
         },
         {
-            title: 'Calendário',
+            title: 'Escalas de serviço',
             img: plaining,
-            titleLink: '',
             link: '/'
+        },
+        {
+            title: 'GC\'s (Células)',
+            img: gc,
+            link: '/'
+        },
+        {
+            title: 'Igreja e congregações',
+            img: church,
+            link: '/'
+        },
+        {
+            title: 'Relatórios',
+            img: reports,
+            link: '/'
+        },
+        {
+            title: 'Usuários',
+            img: user,
+            link: '/user'
         },
         {
             title: 'Treinamentos',
             img: training,
-            titleLink: '',
+            link: '/'
+        },
+        {
+            title: 'Sair do sistema',
+            img: exit,
             link: '/'
         }
     ]
-
-    classDiv = (position) => {
-        if (position % 2) {
-            return 'button-right';
-        }
-        return 'button-left';
-    }
 
     showModal = (show) => this.setState({ showModal: show });
 
@@ -78,33 +90,21 @@ class Buttons extends React.Component {
                         alterModalState={this.showModal}
                     />
                 }
-                <div className="title">
-                    EDUARDO FEITOSA
-                </div>
                 <div className="sub-title">
-                    O QUE DESEJA FAZER?
+                    Toque em um dos itens para iniciar
                 </div>
                 {
                     this.buttons.map((item, i) =>
-                        <div key={i}>
-                            {
-                                item.title === "Cadastrar usuário" &&
-                                <div className={this.classDiv(i)} onClick={this.showModal}>
-                                    <div className="icon">
-                                        <img src={item.img} alt={item.title} title={item.title} />
-                                    </div>
-                                    {item.title}
+                        <div key={i} className="buttom">
+                            <NavLink to={item.link}>
+                                <div className="icon-buttom">
+                                    <img src={item.img} alt={item.title} title={item.title} />
                                 </div>
-                            }
-                            {
-                                item.title !== "Cadastrar usuário" &&
-                                <NavLink to={item.link} className={this.classDiv(i)}>
-                                    <div className="icon">
-                                        <img src={item.img} alt={item.title} title={item.title} />
-                                    </div>
+                                <div className="title-buttom">
                                     {item.title}
-                                </NavLink>
-                            }
+                                    <span className="arrow">></span>
+                                </div>
+                            </NavLink>
                         </div>
                     )
                 }

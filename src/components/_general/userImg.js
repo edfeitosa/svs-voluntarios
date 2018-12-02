@@ -9,6 +9,10 @@ const UserImg = () => {
       <div className="img">
         <img src={imgUser} alt="Usuário" title="Usuário" />
       </div>
+      <div className="clear"></div>
+      <div className="title">
+        EDUARDO FEITOSA
+      </div>
     </div>
   )
 }
