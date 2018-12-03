@@ -13,7 +13,6 @@ const buttons = [
   {
     title: 'Central',
     img: volunteers,
-    titleLink: '',
     link: '/user?page=createuser&level=central'
   },
   {
@@ -24,23 +23,14 @@ const buttons = [
   {
     title: 'Líder',
     img: leader,
-    titleLink: '',
     link: '/user?page=createuser&level=lider'
   },
   {
     title: 'Voluntário',
     img: user,
-    titleLink: '',
     link: '/user?page=createuser&level=voluntario'
   }
 ]
-
-const classDiv = (position) => {
-  if (position % 2) {
-    return 'button-right-modal-user';
-  }
-  return 'button-left-modal-user';
-}
 
 const ModalUser = ({
   showModal,
@@ -63,12 +53,14 @@ const ModalUser = ({
         </div>
         {
           buttons.map((item, i) =>
-            <NavLink key={i} to={item.link} className={classDiv(i)}>
-              <div className="icon-modal-user">
-                <img src={item.img} alt={item.title} title={item.title} />
-              </div>
-              {item.title}
-            </NavLink>
+            <div key={i} className="buttom-modal">
+              <NavLink to={item.link} onClick={closeModal}>
+                <div className="icon-buttom-modal">
+                  <img src={item.img} alt={item.title} title={item.title} />
+                </div>
+                <div className="title-buttom-modal">{item.title}</div>
+              </NavLink>
+            </div>
           )
         }
         <input

@@ -53,29 +53,34 @@
       text-align: center;
     }
     
-    .button-left-modal-user {
-      float: left;
-      @include buttonConfigModalUser;
-  
-      .icon-modal-user {
-          @include iconConfigModalUser;
+    .buttom-modal {
+      position: relative;
+      background-color: #eee;
+      border-radius: 3px;
+      padding: 5px 0px 0px 0px;
+      margin-bottom: 5px;
+      max-height: 30px;
+      overflow: hidden;
+      cursor: pointer;
 
-          > img {
-            width: 100%;
-          }
+      .title-buttom-modal {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 10px;
+        padding-top: 6px;
       }
-    }
-    
-    .button-right-modal-user {
-      float: right;
-      @include buttonConfigModalUser;
   
-      .icon-modal-user {
-          @include iconConfigModalUser;
+      .icon-buttom-modal {
+        float: left;
+        width: 24px;
+        left: 50%;
+        margin: -10px 10px 0px 0px;
+        background-color: #d6d6d6;
+        padding: 10px;
 
-          > img {
+        > img {
             width: 100%;
-          }
+        }
       }
     }
 
