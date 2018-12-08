@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FooterSearchUser } from '../_general/footer';
-
 class SearchUser extends React.Component {
 
     render() {
@@ -9,7 +7,6 @@ class SearchUser extends React.Component {
         return (
             <div>
                 <h3>Buscar Informações</h3>
-                <FooterSearchUser />
             </div>
         )
     }

@@ -6,7 +6,6 @@ import AddListUser from '../components/user/addListUser';
 import SearchUser from '../components/user/searchUser';
 
 import ModalUser from './../components/_general/modalUser';
-import { FooterCreateUser } from './../components/_general/footer';
 
 import newUser from './../images/icons/new.png';
 
@@ -42,10 +41,9 @@ class User extends React.Component {
                     !parsed.page &&
                     <div>
                         <h3>Usuários</h3>
-                        <div className="new-user" onClick={this.showModal}>
+                        <div className="new-buttom" onClick={this.showModal}>
                             <img src={newUser} alt="Novo" title="Novo" />
                         </div>
-                        <FooterCreateUser />
                     </div>
                 }
             </div>

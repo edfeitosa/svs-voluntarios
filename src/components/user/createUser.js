@@ -4,7 +4,6 @@ import MaskedInput from 'react-text-mask'
 
 import usersClient from '../../client/usersClient';
 import Modal from '../_general/modal';
-import { FooterCreateUser } from '../_general/footer';
 
 import '../../styles/_general/forms.scss';
 
@@ -173,7 +172,6 @@ class CreateUser extends React.Component {
                     value="LIMPAR FORMULÁRIO"
                     onClick={this.onClear}
                 />
-                <FooterCreateUser />
             </div>
         )
     }
