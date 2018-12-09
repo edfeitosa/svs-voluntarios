@@ -6,7 +6,7 @@ class SVSClient {
 
     _httpClient() {
         const svsHttpClient = axios.create({
-            baseURL: 'http://localhost/svs/api/'
+            baseURL: 'http://localhost:85/svs/api/'
         });
         const token = '';
         svsHttpClient.defaults.headers.common.Authorization = `svs ${token}`;

@@ -7,7 +7,7 @@ import SearchUser from '../components/user/searchUser';
 
 import ModalUser from './../components/_general/modalUser';
 
-import newUser from './../images/icons/new.png';
+import newItem from './../images/icons/new.png';
 
 import './../styles/pages/user.scss';
 
@@ -42,7 +42,7 @@ class User extends React.Component {
                     <div>
                         <h3>Usuários</h3>
                         <div className="new-buttom" onClick={this.showModal}>
-                            <img src={newUser} alt="Novo" title="Novo" />
+                            <img src={newItem} alt="Novo" title="Novo" />
                         </div>
                     </div>
                 }

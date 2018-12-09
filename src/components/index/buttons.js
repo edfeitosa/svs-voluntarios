@@ -23,7 +23,7 @@ const buttons = [
     {
         title: 'Departamentos',
         img: departaments,
-        link: '/departaments'
+        link: '/departments'
     },
     /*{
         title: 'Editar meus dados',
