@@ -40,7 +40,7 @@ class User extends React.Component {
                 {
                     !parsed.page &&
                     <div>
-                        <h3>Usuários</h3>
+                        <h3>USUÁRIOS</h3>
                         <div className="new-buttom" onClick={this.showModal}>
                             <img src={newItem} alt="Novo" title="Novo" />
                         </div>

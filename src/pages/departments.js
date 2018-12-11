@@ -17,7 +17,7 @@ class Departments extends React.Component {
                 {
                     !parsed.page &&
                     <div>
-                        <h3>Departamentos</h3>
+                        <h3>DEPARTAMENTOS</h3>
                         <div className="new-buttom">
                             <NavLink to="/departments?page=createdepartment">
                               <img src={newItem} alt="Novo" title="Novo" />
