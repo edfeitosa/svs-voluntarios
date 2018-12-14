@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user component renders without crashing 1`] = `
+<div
+  className="padding-content"
+>
+  <div>
+    <h3>
+      USUÁRIOS
+    </h3>
+    <div
+      className="new-buttom"
+      onClick={[Function]}
+    >
+      <img
+        alt="Novo"
+        src="test-file-stub"
+        title="Novo"
+      />
+    </div>
+  </div>
+</div>
+`;
